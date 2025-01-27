@@ -1,0 +1,3 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder:fidelity-account-overview}/.venv/bin/python"
+}

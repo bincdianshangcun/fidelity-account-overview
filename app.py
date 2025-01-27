@@ -22,7 +22,7 @@ COMMON_ARGS = {
 }
 
 
-@st.experimental_memo
+@st.cache_data
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     """
     Take Raw Fidelity Dataframe and return usable dataframe.
@@ -44,10 +44,10 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     df = df.dropna()
 
     price_index = df.columns.get_loc("last_price")
-    cost_basis_index = df.columns.get_loc("cost_basis_per_share")
+    cost_basis_index = df.columns.get_loc("average_cost_basis")
     df[df.columns[price_index : cost_basis_index + 1]] = df[
         df.columns[price_index : cost_basis_index + 1]
-    ].transform(lambda s: s.str.replace("$", "", regex=False).str.replace("%", "", regex=False).astype(float))
+    ].transform(lambda s: s.str.replace("$", "", regex=False).str.replace("%", "", regex=False).str.replace("--", "0", regex=False).astype(float))
 
     quantity_index = df.columns.get_loc("quantity")
     most_relevant_columns = df.columns[quantity_index : cost_basis_index + 1]
@@ -57,7 +57,7 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-@st.experimental_memo
+@st.cache_data
 def filter_data(
     df: pd.DataFrame, account_selections: list[str], symbol_selections: list[str]
 ) -> pd.DataFrame:
@@ -93,7 +93,7 @@ def main() -> None:
 
     if uploaded_data is None:
         st.info("Using example data. Upload a file above to use your own data!")
-        uploaded_data = open("example.csv", "r")
+        uploaded_data = open("data/20250126.csv", "r")
     else:
         st.success("Uploaded your file!")
 
