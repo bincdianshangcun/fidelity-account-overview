@@ -38,6 +38,8 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
       - Clean $ and % signs from values and convert to floats
     - In Cash accolunts
       - Fill in missing value of number coulmns
+    - In BrokerageLink accolunts
+      - Append account_number to account_name
 
     Args:
         df (pd.DataFrame): Raw fidelity csv data
@@ -82,6 +84,10 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
 
         df.loc[df.query(f'symbol=="{cash_symbol}"').index, 'quantity'] = df['current_value'] / 1.0
         df.loc[df.query(f'symbol=="{cash_symbol}"').index, 'cost_basis_total'] = df['current_value']
+
+
+    for bl_account in ['BrokerageLink']:
+        df.loc[df.query(f'account_name=="{bl_account}"').index, 'account_name'] = df['account_name']+'_'+df['account_number']
 
 
     quantity_index = df.columns.get_loc("quantity")
@@ -190,7 +196,7 @@ def main() -> None:
         ),
         cellStyle=cellsytle_jscode,
     )
-    gb.configure_pagination()
+    gb.configure_pagination(enabled=False)
     gb.configure_columns(("account_name", "symbol"), pinned=True)
     gridOptions = gb.build()
 
