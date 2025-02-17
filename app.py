@@ -5,6 +5,7 @@ import streamlit as st
 from st_aggrid import AgGrid
 from st_aggrid.shared import JsCode
 from st_aggrid.grid_options_builder import GridOptionsBuilder
+import numpy as np
 import pandas as pd
 import plotly.express as px
 
@@ -27,9 +28,16 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     """
     Take Raw Fidelity Dataframe and return usable dataframe.
     - snake_case headers
-    - Include 401k by filling na type
-    - Drop Cash accounts and misc text
-    - Clean $ and % signs from values and convert to floats
+    - Filter out unrelevant rows:
+      - symbol is na
+      - symbol is 50162D100 #LLEN
+      - symbol is BRT2DP6D1 #MICROSOFT 401K PLAN - BTC SHRT-TERM INV
+      - symbol is Pending Activity #LLEN
+    - In numbers columns
+      - Repalce '--' with np.nan
+      - Clean $ and % signs from values and convert to floats
+    - In Cash accolunts
+      - Fill in missing value of number coulmns
 
     Args:
         df (pd.DataFrame): Raw fidelity csv data
@@ -40,20 +48,48 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     df.columns = df.columns.str.lower().str.replace(" ", "_", regex=False).str.replace("/", "_", regex=False)
 
+    df = df[
+        ~( df['symbol'].isnull() | df['symbol'].isin(['50162D100', 'BRT2DP6D1', 'Pending Activity']) )
+    ]
+
     df.type = df.type.fillna("unknown")
-    df = df.dropna()
 
     price_index = df.columns.get_loc("last_price")
     cost_basis_index = df.columns.get_loc("average_cost_basis")
     df[df.columns[price_index : cost_basis_index + 1]] = df[
         df.columns[price_index : cost_basis_index + 1]
-    ].transform(lambda s: s.str.replace("$", "", regex=False).str.replace("%", "", regex=False).str.replace("--", "0", regex=False).astype(float))
+    ].replace('--', np.nan).transform(
+        lambda s: 
+        s.str.replace("$", "", regex=False).str.replace("%", "", regex=False).astype(float)
+    )
+
+
+    cash_symbol_fillin = {
+            'last_price': 1.0,
+            'average_cost_basis': 1.0,
+            'last_price_change': 0,
+            "total_gain_loss_dollar": 0,
+            "total_gain_loss_percent": 0,
+            "today's_gain_loss_dollar": 0,
+            "today's_gain_loss_percent": 0,
+    }
+    for cash_symbol in ['SPAXX**', 'CORE**', 'FZDXX']:
+        df.loc[df.query(f'symbol=="{cash_symbol}"').index, [ 
+            c for c in cash_symbol_fillin.keys() 
+        ]] = [
+            v for v in cash_symbol_fillin.values() 
+        ]
+
+        df.loc[df.query(f'symbol=="{cash_symbol}"').index, 'quantity'] = df['current_value'] / 1.0
+        df.loc[df.query(f'symbol=="{cash_symbol}"').index, 'cost_basis_total'] = df['current_value']
+
 
     quantity_index = df.columns.get_loc("quantity")
     most_relevant_columns = df.columns[quantity_index : cost_basis_index + 1]
     first_columns = df.columns[0:quantity_index]
     last_columns = df.columns[cost_basis_index + 1 :]
     df = df[[*most_relevant_columns, *first_columns, *last_columns]]
+
     return df
 
 
@@ -93,7 +129,7 @@ def main() -> None:
 
     if uploaded_data is None:
         st.info("Using example data. Upload a file above to use your own data!")
-        uploaded_data = open("data/20250126.csv", "r")
+        uploaded_data = open("data/current", "r")
     else:
         st.success("Uploaded your file!")
 

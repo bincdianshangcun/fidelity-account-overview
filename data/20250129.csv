@@ -1,0 +1,35 @@
+﻿Account Number,Account Name,Symbol,Description,Quantity,Last Price,Last Price Change,Current Value,Today's Gain/Loss Dollar,Today's Gain/Loss Percent,Total Gain/Loss Dollar,Total Gain/Loss Percent,Percent Of Account,Cost Basis Total,Average Cost Basis,Type
+X40643629,Individual - TOD,SPAXX**,HELD IN MONEY MARKET,,,,$10015.55,,,,,0.85%,,,Cash
+X40643629,Individual - TOD,1810:HK,XIAOMI CORPORATION USD0.0000025 B CLASS,3000,$4.9156,-$0.0044,$14746.84,$0.00,0.00%,+$3140.80,+27.06%,1.25%,$11606.04,$3.87,Cash
+X40643629,Individual - TOD,50162D100,L&L ENERGY INC COM STK USD0.001 ISIN #US50162D1000 SEDOL #B4XF8P0,1180,--,--,--,--,--,--,--,0.00%,$5581.40,$4.73,Cash
+X40643629,Individual - TOD,FZDXX,FIDELITY MMKT PREMIUM CLASS,271020.53,$1.00,$0.00,$271020.53,--,--,--,--,22.96%,--,--,Cash
+X40643629,Individual - TOD,GRAB,GRAB HLDGS LTD CL A ORD ISIN #KYG4124C1096,19761,$4.73,+$0.17,$93469.53,+$3359.37,+3.72%,+$81778.59,+699.50%,7.92%,$11690.94,$0.59,Cash
+X40643629,Individual - TOD,NVDA,NVIDIA CORPORATION COM,100,$120.9187,-$8.0713,$12091.87,-$807.13,-6.26%,+$321.37,+2.73%,1.02%,$11770.50,$117.71,Margin
+X40643629,Individual - TOD,ORCL,ORACLE CORP,2914.395,$160.535,-$3.465,$467862.40,-$10098.38,-2.12%,+$39368.77,+9.18%,39.63%,$428493.63,$147.03,Margin
+X40643629,Individual - TOD,PRCH,PORCH GROUP INC COM,90,$4.10,-$0.19,$369.00,-$17.10,-4.43%,--,--,0.03%,--,--,Margin
+X40643629,Individual - TOD,QQQ,INVESCO QQQ TR UNIT SER 1,290.459,$518.23,-$3.58,$150524.56,-$1039.85,-0.69%,+$8437.98,+5.93%,12.75%,$142086.58,$489.18,Margin
+X40643629,Individual - TOD,VOO,VANGUARD INDEX FUNDS S&P 500 ETF USD,290.935,$551.75,-$4.10,$160523.38,-$1192.84,-0.74%,+$6814.39,+4.43%,13.60%,$153708.99,$528.33,Margin
+216811260,ROTH IRA,SPAXX**,HELD IN MONEY MARKET,,,,$147.86,,,,,0.34%,,,Cash
+216811260,ROTH IRA,BA,BOEING CO,1,$173.1153,-$4.6647,$173.11,-$4.67,-2.63%,-$149.53,-46.35%,0.39%,$322.64,$322.64,Cash
+216811260,ROTH IRA,BABA,ALIBABA GROUP HOLDING LTD SPON ADS EACH REP 8 ORD SHS,289.989,$97.98,+$1.95,$28413.12,+$565.47,+2.03%,-$15743.27,-35.66%,64.55%,$44156.39,$152.27,Cash
+216811260,ROTH IRA,VOO,VANGUARD INDEX FUNDS S&P 500 ETF USD,27.703,$551.75,-$4.10,$15285.13,-$113.59,-0.74%,+$676.97,+4.63%,34.72%,$14608.16,$527.31,Cash
+220826526,Traditional IRA,SPAXX**,HELD IN MONEY MARKET,,,,$525.89,,,,,0.19%,,,Cash
+220826526,Traditional IRA,BABA,ALIBABA GROUP HOLDING LTD SPON ADS EACH REP 8 ORD SHS,1460.302,$97.98,+$1.95,$143080.38,+$2847.58,+2.03%,-$119977.30,-45.61%,51.41%,$263057.68,$180.14,Cash
+220826526,Traditional IRA,QQQ,INVESCO QQQ TR UNIT SER 1,70,$518.23,-$3.58,$36276.10,-$250.60,-0.69%,+$2220.14,+6.51%,13.04%,$34055.96,$486.51,Cash
+220826526,Traditional IRA,VOO,VANGUARD INDEX FUNDS S&P 500 ETF USD,61,$551.75,-$4.10,$33656.75,-$250.10,-0.74%,+$1586.95,+4.94%,12.09%,$32069.80,$525.73,Cash
+220826526,Traditional IRA,XIACF,XIAOMI CORPORATION USD0.0000025 B CLASS ISIN #KYG9830T1067 SEDOL #BG0ZMJ9,12500,$5.18,+$0.2638,$64750.00,+$3297.50,+5.36%,+$23338.15,+56.35%,23.27%,$41411.85,$3.31,Cash
+35004,ORACLE CORPORATION,,BROKERAGELINK,200723.82,$1.00,$0.00,$200723.82,$0.00,0.00%,$0.00,0.00%,--,$200723.82,$1.00,
+89766,MICROSOFT 401K PLAN,,BROKERAGELINK,31608.75,$1.00,$0.00,$31608.75,$0.00,0.00%,$0.00,0.00%,--,$31608.75,$1.00,
+89766,MICROSOFT 401K PLAN,BRT2DP6D1,BTC SHRT-TERM INV,0.02,$1.00,$0.00,$0.02,$0.00,0.00%,$0.00,0.00%,100.00%,$0.02,$1.00,
+652837696,BrokerageLink,BABA,ALIBABA GROUP HOLDING LTD SPON ADS EACH REP 8 ORD SHS,419.449,$97.98,+$1.95,$41097.61,+$817.92,+2.03%,-$15684.46,-27.63%,20.39%,$56782.07,$135.37,Cash
+652837696,BrokerageLink,FXAIX,FIDELITY 500 INDEX FUND,761.138,$210.80,+$1.93,$160447.89,$0.00,0.00%,+$41810.97,+35.24%,79.61%,$118636.92,$155.87,Cash
+652837696,BrokerageLink,Pending Activity,,,,,-$3.75,,,,,,,,
+652837700,BrokerageLink,BABA,ALIBABA GROUP HOLDING LTD SPON ADS EACH REP 8 ORD SHS,126.352,$97.98,+$1.95,$12379.96,+$246.38,+2.03%,-$6415.76,-34.14%,38.86%,$18795.72,$148.76,Cash
+652837700,BrokerageLink,FXAIX,FIDELITY 500 INDEX FUND,92.387,$210.80,+$1.93,$19475.17,$0.00,0.00%,+$5192.27,+36.35%,61.14%,$14282.90,$154.60,Cash
+Z05356621,Cash Management (Individual - TOD),CORE**,FDIC-INSURED DEPOSIT SWEEP,,,,$0.44,,,,,100.00%,,,Cash
+
+"The data and information in this spreadsheet is provided to you solely for your use and is not for distribution. The spreadsheet is provided for informational purposes only, and is not intended to provide advice, nor should it be construed as an offer to sell, a solicitation of an offer to buy or a recommendation for any security by Fidelity or any third party. Data and information shown is based on information known to Fidelity as of the date it was exported and is subject to change. It should not be used in place of your account statements or trade confirmations and is not intended for tax reporting purposes. For more information on the data included in this spreadsheet, including any limitations thereof, go to Fidelity.com."
+
+"Brokerage services are provided by Fidelity Brokerage Services LLC (FBS), 900 Salem Street, Smithfield, RI 02917. Custody and other services provided by National Financial Services LLC (NFS). Both are Fidelity Investment companies and members SIPC, NYSE. Neither FBS nor NFS offer crypto as a direct investment nor provide trading or custody services for such assets."
+
+"Date downloaded Jan-29-2025 2:14 p.m ET"
