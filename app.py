@@ -10,6 +10,7 @@ import pandas as pd
 import plotly.express as px
 from util import fmt_float
 
+
 chart = functools.partial(st.plotly_chart, use_container_width=True)
 COMMON_ARGS = {
     "color": "symbol",
@@ -244,11 +245,13 @@ def main() -> None:
     fig.update_layout(barmode="stack", xaxis={"categoryorder": "total descending"})
     chart(fig)
 
+    glfn = lambda v: 'gain' if v>=0 else 'loss'
+
     st.subheader("Value of each Symbol")
     draw_bar(
         y_val="current_value", 
         color="account_name", 
-        text=[f"{v1}<br>{fmt_float(v2)}<br>gain:{v3}%" for v1,v2,v3 in zip(df['account_name'], df['current_value'], df['total_gain_loss_percent'])],
+        text=[f"{v1}<br>{fmt_float(v2)}<br>{v3}% ({glfn(v3)})" for v1,v2,v3 in zip(df['account_name'], df['current_value'], df['total_gain_loss_percent'])],
     )
 
     def draw_sunburst(ldf,**kwargs) -> None:
@@ -276,16 +279,25 @@ def main() -> None:
     chart(fig)
 
     st.subheader("Total Value gained each Symbol")
-    draw_bar("total_gain_loss_dollar")
+    draw_bar(
+        y_val="total_gain_loss_dollar",
+        color="account_name", 
+        text=[f"{v1}<br>{fmt_float(v2)} ({glfn(v2)})" for v1,v2 in zip(df['account_name'], df['total_gain_loss_dollar'])],
+    )
+ 
     st.subheader("Total Percent Value gained each Symbol")
-    draw_bar("total_gain_loss_percent")
+    draw_bar(
+        y_val="total_gain_loss_percent",
+        color="account_name", 
+        text=[f"{v1}<br>{v2}% ({glfn(v2)})" for v1,v2 in zip(df['account_name'], df['total_gain_loss_percent'])],
+    )
 
 
 if __name__ == "__main__":
     st.set_page_config(
         "Fidelity Account View by Gerard Bentley",
         "📊",
-        initial_sidebar_state="expanded",
+        initial_sidebar_state="collapsed",
         layout="wide",
     )
     main()
