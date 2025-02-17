@@ -37,11 +37,12 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     - In numbers columns
       - Replace '--' with np.nan
       - Clean $ and % signs from values and convert to floats
-    - Remove Symbol if the cost<=1
     - In Cash accolunts
       - Fill in missing value of number coulmns
-    - In BrokerageLink accolunts
+    - In BrokerageLink accounts
+      - Rename account_number to MSFT or ORCL based on a mapping
       - Append account_number to account_name
+    - Remove Symbol if the cost<=1
 
     Args:
         df (pd.DataFrame): Raw fidelity csv data
@@ -90,9 +91,12 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
         df.loc[df.query(f'symbol=="{cash_symbol}"').index, 'quantity'] = df['current_value'] / 1.0
         df.loc[df.query(f'symbol=="{cash_symbol}"').index, 'cost_basis_total'] = df['current_value']
 
+    bl_mapping = {'652837700':'MSFT','652837696':'ORCL'}
+    for bl_number,bl_name in bl_mapping.items():
+        df.loc[df.query(f'account_number=="{bl_number}"').index, 'account_number'] = bl_name
 
     for bl_account in ['BrokerageLink']:
-        df.loc[df.query(f'account_name=="{bl_account}"').index, 'account_name'] = df['account_name']+'_'+df['account_number']
+        df.loc[df.query(f'account_name=="{bl_account}"').index, 'account_name'] = df['account_name']+' - '+df['account_number']
 
 
     df = df[ df['cost_basis_total'] > 1 ]
