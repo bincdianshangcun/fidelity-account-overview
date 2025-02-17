@@ -12,7 +12,6 @@ import plotly.express as px
 chart = functools.partial(st.plotly_chart, use_container_width=True)
 COMMON_ARGS = {
     "color": "symbol",
-    "color_discrete_sequence": px.colors.sequential.Greens,
     "hover_data": [
         "account_name",
         "percent_of_account",
@@ -239,8 +238,7 @@ def main() -> None:
         y="account_name",
         x="current_value",
         color="account_name",
-        text=[f"{v} ({v/totals.current_value.sum()*100:.1f}%)" for v in totals['current_value']],
-        color_discrete_sequence=px.colors.sequential.Greens,
+        text=[f"{v}<br>{v/totals.current_value.sum()*100:.1f}%" for v in totals['current_value']],
     )
     fig.update_layout(barmode="stack", xaxis={"categoryorder": "total descending"})
     chart(fig)
@@ -249,7 +247,7 @@ def main() -> None:
     draw_bar(
         y_val="current_value", 
         color="account_name", 
-        text=[f"{v1}<br>({v2})" for v1, v2 in zip(df['account_name'], df['current_value'])],
+        text=[f"{v1}<br>{v2}<br>gain:{v3}%" for v1,v2,v3 in zip(df['account_name'], df['current_value'], df['total_gain_loss_percent'])],
     )
 
     def draw_sunburst(ldf,**kwargs) -> None:
@@ -261,13 +259,19 @@ def main() -> None:
         return fig
 
     st.subheader("Value of each Symbol per Account")
-    fig = draw_sunburst(df, path=["account_name", "symbol"], values="current_value", color_discrete_sequence=None)
+    fig = draw_sunburst(df, path=["account_name", "symbol"], values="current_value")
     fig.update_layout(margin=dict(t=0, b=0, l=0, r=0))
     chart(fig)
 
     st.subheader("Value of each Symbol")
-    fig = px.pie(df, values="current_value", names="symbol", **COMMON_ARGS)
+    fig = px.pie(
+        df, 
+        values="current_value", 
+        names="symbol", 
+        color='symbol', 
+    )
     fig.update_layout(margin=dict(t=0, b=0, l=0, r=0))
+    fig.update_traces(textposition='inside', textinfo='percent+label')
     chart(fig)
 
     st.subheader("Total Value gained each Symbol")
