@@ -34,8 +34,9 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
       - symbol is BRT2DP6D1 #MICROSOFT 401K PLAN - BTC SHRT-TERM INV
       - symbol is Pending Activity #LLEN
     - In numbers columns
-      - Repalce '--' with np.nan
+      - Replace '--' with np.nan
       - Clean $ and % signs from values and convert to floats
+    - Remove Symbol if the cost<=1
     - In Cash accolunts
       - Fill in missing value of number coulmns
     - In BrokerageLink accolunts
@@ -50,11 +51,14 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     df.columns = df.columns.str.lower().str.replace(" ", "_", regex=False).str.replace("/", "_", regex=False)
 
+
     df = df[
         ~( df['symbol'].isnull() | df['symbol'].isin(['50162D100', 'BRT2DP6D1', 'Pending Activity']) )
     ]
 
+
     df.type = df.type.fillna("unknown")
+
 
     price_index = df.columns.get_loc("last_price")
     cost_basis_index = df.columns.get_loc("average_cost_basis")
@@ -64,6 +68,9 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
         lambda s: 
         s.str.replace("$", "", regex=False).str.replace("%", "", regex=False).astype(float)
     )
+
+
+    df = df[ df['cost_basis_total'] > 1 ]
 
 
     cash_symbol_fillin = {
@@ -202,8 +209,12 @@ def main() -> None:
 
     AgGrid(df, gridOptions=gridOptions, allow_unsafe_jscode=True)
 
-    def draw_bar(y_val: str) -> None:
-        fig = px.bar(df, y=y_val, x="symbol", **COMMON_ARGS)
+    def draw_bar(y_val: str, **kwargs) -> None:
+        if not kwargs:
+            kwargs = COMMON_ARGS
+        else:
+            kwargs = {**COMMON_ARGS, **kwargs}
+        fig = px.bar(df, y=y_val, x="symbol", **kwargs)
         fig.update_layout(barmode="stack", xaxis={"categoryorder": "total descending"})
         chart(fig)
 
@@ -228,18 +239,29 @@ def main() -> None:
         y="account_name",
         x="current_value",
         color="account_name",
+        text=[f"{v} ({v/totals.current_value.sum()*100:.1f}%)" for v in totals['current_value']],
         color_discrete_sequence=px.colors.sequential.Greens,
     )
     fig.update_layout(barmode="stack", xaxis={"categoryorder": "total descending"})
     chart(fig)
 
     st.subheader("Value of each Symbol")
-    draw_bar("current_value")
+    draw_bar(
+        y_val="current_value", 
+        color="account_name", 
+        text=[f"{v1}<br>({v2})" for v1, v2 in zip(df['account_name'], df['current_value'])],
+    )
+
+    def draw_sunburst(ldf,**kwargs) -> None:
+        if not kwargs:
+            kwargs = COMMON_ARGS
+        else:
+            kwargs = {**COMMON_ARGS, **kwargs}
+        fig = px.sunburst(ldf, **kwargs)
+        return fig
 
     st.subheader("Value of each Symbol per Account")
-    fig = px.sunburst(
-        df, path=["account_name", "symbol"], values="current_value", **COMMON_ARGS
-    )
+    fig = draw_sunburst(df, path=["account_name", "symbol"], values="current_value", color_discrete_sequence=None)
     fig.update_layout(margin=dict(t=0, b=0, l=0, r=0))
     chart(fig)
 
