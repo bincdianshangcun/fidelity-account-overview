@@ -100,6 +100,21 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
 
 
     df = df[ df['cost_basis_total'] > 1 ]
+    
+    
+    investment_type_mapping = {
+        'Cash': ['SPAXX**','FZDXX'],
+        'IndexFund': ['FXAIX','VOO','QQQ'],
+    }
+    investment_type_mapping = {   
+        s:k
+        for k,l in investment_type_mapping.items()
+        for s in l
+    }
+    for symbol,investment_type in investment_type_mapping.items():
+        df.loc[df.query(f'symbol=="{symbol}"').index, 'investment_type'] = investment_type
+
+    df.loc[~df['symbol'].isin(investment_type_mapping.keys()), 'investment_type'] = 'Stock'
 
 
     quantity_index = df.columns.get_loc("quantity")
@@ -244,7 +259,7 @@ def main() -> None:
         y="account_name",
         x="current_value",
         color="account_name",
-        text=[f"{fmt_float(v)}<br>{v/totals.current_value.sum()*100:.1f}%" for v in totals['current_value']],
+        text=[f"{fmt_float(v)}<br>{fmt_float(v/totals.current_value.sum()*100)}%" for v in totals['current_value']],
     )
     fig.update_layout(barmode="stack", xaxis={"categoryorder": "total descending"})
     chart(fig)
@@ -255,7 +270,7 @@ def main() -> None:
     draw_bar(
         y_val="current_value", 
         color="account_name", 
-        text=[f"{v1}<br>{fmt_float(v2)}<br>{v3}% ({glfn(v3)})" for v1,v2,v3 in zip(df['account_name'], df['current_value'], df['total_gain_loss_percent'])],
+        text=[f"{v1}<br>{fmt_float(v2)}<br>{fmt_float(v3)}% ({glfn(v3)})" for v1,v2,v3 in zip(df['account_name'], df['current_value'], df['total_gain_loss_percent'])],
     )
 
     def draw_sunburst(ldf,**kwargs) -> None:
@@ -264,23 +279,22 @@ def main() -> None:
         else:
             kwargs = {**COMMON_ARGS, **kwargs}
         fig = px.sunburst(ldf, **kwargs)
+        fig.update_traces(textinfo="label+percent parent")
+        fig.update_layout(margin=dict(t=0, b=0, l=0, r=0))
         return fig
 
     st.subheader("Value of each Symbol per Account")
     fig = draw_sunburst(df, path=["account_name", "symbol"], values="current_value")
-    fig.update_layout(margin=dict(t=0, b=0, l=0, r=0))
     chart(fig)
 
     st.subheader("Value of each Symbol")
-    fig = px.pie(
-        df, 
-        values="current_value", 
-        names="symbol", 
-        color='symbol', 
-    )
-    fig.update_layout(margin=dict(t=0, b=0, l=0, r=0))
-    fig.update_traces(textposition='inside', textinfo='percent+label')
+    fig = draw_sunburst(df, path=["symbol"], values="current_value")
     chart(fig)
+
+    st.subheader("Value of each Symbol per Investment Type")
+    fig = draw_sunburst(df, path=["investment_type", "symbol"], values="current_value")
+    chart(fig)
+
 
     st.subheader("Total Value gained each Symbol")
     draw_bar(
@@ -293,7 +307,7 @@ def main() -> None:
     draw_bar(
         y_val="total_gain_loss_percent",
         color="account_name", 
-        text=[f"{v1}<br>{v2}% ({glfn(v2)})" for v1,v2 in zip(df['account_name'], df['total_gain_loss_percent'])],
+        text=[f"{v1}<br>{fmt_float(v2)}% ({glfn(v2)})" for v1,v2 in zip(df['account_name'], df['total_gain_loss_percent'])],
     )
 
 
