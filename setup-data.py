@@ -17,7 +17,6 @@ candidates.sort(key=lambda p:p[1], reverse=True)
 
 # Portfolio_Positions_Feb-17-2025.csv
 today = datetime.today().date().strftime('%b-%d-%Y')
-print(today)
 
 latest_csv_path:Path = None
 for p,_ in candidates:
@@ -26,7 +25,7 @@ for p,_ in candidates:
         break
 
 if not latest_csv_path:
-    print('no file found, nothing changed')
+    print('no new data file found, nothing changed')
     exit(1)
 
 print(f'file found {p}')
