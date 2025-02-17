@@ -1,3 +1,7 @@
 plotly
 streamlit
 streamlit-aggrid
+pylint
+pytest
+pytest-mock
+python-dateutil

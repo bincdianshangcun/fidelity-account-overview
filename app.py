@@ -8,6 +8,7 @@ from st_aggrid.grid_options_builder import GridOptionsBuilder
 import numpy as np
 import pandas as pd
 import plotly.express as px
+from util import fmt_float
 
 chart = functools.partial(st.plotly_chart, use_container_width=True)
 COMMON_ARGS = {
@@ -69,9 +70,6 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     )
 
 
-    df = df[ df['cost_basis_total'] > 1 ]
-
-
     cash_symbol_fillin = {
             'last_price': 1.0,
             'average_cost_basis': 1.0,
@@ -94,6 +92,9 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
 
     for bl_account in ['BrokerageLink']:
         df.loc[df.query(f'account_name=="{bl_account}"').index, 'account_name'] = df['account_name']+'_'+df['account_number']
+
+
+    df = df[ df['cost_basis_total'] > 1 ]
 
 
     quantity_index = df.columns.get_loc("quantity")
@@ -223,14 +224,14 @@ def main() -> None:
     if len(account_selections) > 1:
         st.metric(
             "Total of All Accounts",
-            f"${totals.current_value.sum():.2f}",
-            f"{totals.total_gain_loss_dollar.sum():.2f}",
+            f"${fmt_float(totals.current_value.sum())}",
+            f"{fmt_float(totals.total_gain_loss_dollar.sum())}",
         )
     for column, row in zip(st.columns(len(totals)), totals.itertuples()):
         column.metric(
             row.account_name,
-            f"${row.current_value:.2f}",
-            f"{row.total_gain_loss_dollar:.2f}",
+            f"${fmt_float(row.current_value)}",
+            f"{fmt_float(row.total_gain_loss_dollar)}",
         )
 
     fig = px.bar(
@@ -238,7 +239,7 @@ def main() -> None:
         y="account_name",
         x="current_value",
         color="account_name",
-        text=[f"{v}<br>{v/totals.current_value.sum()*100:.1f}%" for v in totals['current_value']],
+        text=[f"{fmt_float(v)}<br>{v/totals.current_value.sum()*100:.1f}%" for v in totals['current_value']],
     )
     fig.update_layout(barmode="stack", xaxis={"categoryorder": "total descending"})
     chart(fig)
@@ -247,7 +248,7 @@ def main() -> None:
     draw_bar(
         y_val="current_value", 
         color="account_name", 
-        text=[f"{v1}<br>{v2}<br>gain:{v3}%" for v1,v2,v3 in zip(df['account_name'], df['current_value'], df['total_gain_loss_percent'])],
+        text=[f"{v1}<br>{fmt_float(v2)}<br>gain:{v3}%" for v1,v2,v3 in zip(df['account_name'], df['current_value'], df['total_gain_loss_percent'])],
     )
 
     def draw_sunburst(ldf,**kwargs) -> None:
