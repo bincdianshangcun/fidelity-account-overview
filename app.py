@@ -287,12 +287,12 @@ def main() -> None:
     fig = draw_sunburst(df, path=["account_name", "symbol"], values="current_value")
     chart(fig)
 
-    st.subheader("Value of each Symbol")
-    fig = draw_sunburst(df, path=["symbol"], values="current_value")
-    chart(fig)
-
     st.subheader("Value of each Symbol per Investment Type")
     fig = draw_sunburst(df, path=["investment_type", "symbol"], values="current_value")
+    chart(fig)
+
+    st.subheader("Value of each Symbol")
+    fig = draw_sunburst(df, path=["symbol"], values="current_value")
     chart(fig)
 
 
