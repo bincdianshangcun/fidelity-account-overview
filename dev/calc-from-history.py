@@ -3,6 +3,8 @@ from pathlib import Path
 
 
 data_path = Path(__file__).parent.parent / 'data'
+# click the symbol, you can see the whole history
+# below data was copied/pasted down, then cleanup a bit manually
 csv_path = data_path / 'history' / 'BrokerageLink-652837700_FXAIX.Feb-19-2025.csv'
 
 Column_CurrentValue='Current Value'
