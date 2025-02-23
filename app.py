@@ -230,11 +230,10 @@ def main() -> None:
     AgGrid(df, gridOptions=gridOptions, allow_unsafe_jscode=True)
 
     def draw_bar(y_val: str, **kwargs) -> None:
-        if not kwargs:
-            kwargs = COMMON_ARGS
-        else:
-            kwargs = {**COMMON_ARGS, **kwargs}
-        fig = px.bar(df, y=y_val, x="symbol", **kwargs)
+        lkwargs = COMMON_ARGS.copy()
+        if kwargs:
+            lkwargs |= kwargs
+        fig = px.bar(df, y=y_val, x="symbol", **lkwargs)
         fig.update_layout(barmode="stack", xaxis={"categoryorder": "total descending"})
         chart(fig)
 
@@ -274,11 +273,11 @@ def main() -> None:
     )
 
     def draw_sunburst(ldf,**kwargs) -> None:
-        if not kwargs:
-            kwargs = COMMON_ARGS
-        else:
-            kwargs = {**COMMON_ARGS, **kwargs}
-        fig = px.sunburst(ldf, **kwargs)
+        lkwargs = COMMON_ARGS.copy()
+        if kwargs:
+            lkwargs |= kwargs
+
+        fig = px.sunburst(ldf, **lkwargs)
         fig.update_traces(textinfo="label+percent parent")
         fig.update_layout(margin=dict(t=0, b=0, l=0, r=0))
         return fig
