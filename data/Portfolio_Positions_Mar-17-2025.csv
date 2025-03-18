@@ -1,0 +1,32 @@
+﻿Account Number,Account Name,Symbol,Description,Quantity,Last Price,Last Price Change,Current Value,Today's Gain/Loss Dollar,Today's Gain/Loss Percent,Total Gain/Loss Dollar,Total Gain/Loss Percent,Percent Of Account,Cost Basis Total,Average Cost Basis,Type
+X40643629,Individual - TOD,1810:HK,XIAOMI CORPORATION USD0.0000025 B CLASS,3000,$7.3427,+$0.4127,$22028.16,+$1238.10,+5.95%,+$10422.12,+89.79%,1.97%,$11606.04,$3.87,Cash
+X40643629,Individual - TOD,50162D100,L&L ENERGY INC COM STK USD0.001 ISIN #US50162D1000 SEDOL #B4XF8P0,1180,--,--,--,--,--,--,--,0.00%,$5581.40,$4.73,Cash
+X40643629,Individual - TOD,FZDXX,FIDELITY MMKT PREMIUM CLASS,152497.57,$1.00,$0.00,$152497.57,--,--,--,--,13.62%,--,--,Cash
+X40643629,Individual - TOD,GRAB,GRAB HLDGS LTD CL A ORD ISIN #KYG4124C1096,19761,$4.45,+$0.05,$87936.45,+$988.05,+1.13%,+$76245.51,+652.17%,7.85%,$11690.94,$0.59,Cash
+X40643629,Individual - TOD,ORCL,ORACLE CORP,2914.395,$154.01,+$4.74,$448845.97,+$13814.23,+3.17%,+$20352.34,+4.74%,40.07%,$428493.63,$147.03,Margin
+X40643629,Individual - TOD,QQQ,INVESCO QQQ TR UNIT SER 1,370.459,$482.77,+$3.11,$178846.49,+$1152.12,+0.64%,-$3626.88,-1.99%,15.97%,$182473.37,$492.56,Margin
+X40643629,Individual - TOD,VOO,VANGUARD INDEX FUNDS S&P 500 ETF USD,440.935,$521.41,+$3.95,$229907.91,+$1741.69,+0.76%,-$6114.31,-2.60%,20.53%,$236022.22,$535.28,Margin
+216811260,ROTH IRA,SPAXX**,HELD IN MONEY MARKET,,,,$148.83,,,,,0.26%,,,Cash
+216811260,ROTH IRA,BA,BOEING CO,1,$161.85,+$0.04,$161.85,+$0.04,+0.02%,-$160.79,-49.84%,0.28%,$322.64,$322.64,Cash
+216811260,ROTH IRA,BABA,ALIBABA GROUP HOLDING LTD SPON ADS EACH REP 8 ORD SHS,289.989,$147.57,+$6.47,$42793.67,+$1876.22,+4.58%,-$1362.72,-3.09%,74.36%,$44156.39,$152.27,Cash
+216811260,ROTH IRA,VOO,VANGUARD INDEX FUNDS S&P 500 ETF USD,27.703,$521.41,+$3.95,$14444.62,+$109.42,+0.76%,-$163.54,-1.12%,25.10%,$14608.16,$527.31,Cash
+220826526,Traditional IRA,SPAXX**,HELD IN MONEY MARKET,,,,$529.31,,,,,0.14%,,,Cash
+220826526,Traditional IRA,BABA,ALIBABA GROUP HOLDING LTD SPON ADS EACH REP 8 ORD SHS,1460.302,$147.57,+$6.47,$215496.76,+$9448.15,+4.58%,-$47560.92,-18.09%,57.61%,$263057.68,$180.14,Cash
+220826526,Traditional IRA,QQQ,INVESCO QQQ TR UNIT SER 1,70,$482.77,+$3.11,$33793.90,+$217.70,+0.64%,-$262.06,-0.77%,9.03%,$34055.96,$486.51,Cash
+220826526,Traditional IRA,VOO,VANGUARD INDEX FUNDS S&P 500 ETF USD,61,$521.41,+$3.95,$31806.01,+$240.95,+0.76%,-$263.79,-0.83%,8.50%,$32069.80,$525.73,Cash
+220826526,Traditional IRA,XIACF,XIAOMI CORPORATION USD0.0000025 B CLASS ISIN #KYG9830T1067 SEDOL #BG0ZMJ9,12500,$7.395,+$0.4664,$92437.50,+$5830.00,+6.73%,+$51025.65,+123.21%,24.71%,$41411.85,$3.31,Cash
+35004,ORACLE CORPORATION,,BROKERAGELINK,212727.7,$1.00,$0.00,$212727.70,$0.00,0.00%,$0.00,0.00%,--,$212727.70,$1.00,
+89766,MICROSOFT 401K PLAN,,BROKERAGELINK,36306.92,$1.00,$0.00,$36306.92,$0.00,0.00%,$0.00,0.00%,--,$36306.92,$1.00,
+89766,MICROSOFT 401K PLAN,BRT2DP6D1,BTC SHRT-TERM INV,0.02,$1.00,$0.00,$0.02,$0.00,0.00%,$0.00,0.00%,100.00%,$0.02,$1.00,
+652837696,BrokerageLink,BABA,ALIBABA GROUP HOLDING LTD SPON ADS EACH REP 8 ORD SHS,419.449,$147.57,+$6.47,$61898.08,+$2713.83,+4.58%,+$5116.01,+9.00%,28.60%,$56782.07,$135.37,Cash
+652837696,BrokerageLink,FXAIX,FIDELITY 500 INDEX FUND,782.167,$197.59,+$1.28,$154548.37,+$1001.17,+0.65%,+$31531.36,+25.63%,71.40%,$123017.01,$157.28,Cash
+652837696,BrokerageLink,Pending Activity,,,,,-$3.75,,,,,,,,
+652837700,BrokerageLink,BABA,ALIBABA GROUP HOLDING LTD SPON ADS EACH REP 8 ORD SHS,126.352,$147.57,+$6.47,$18645.76,+$817.49,+4.58%,-$149.96,-0.80%,50.06%,$18795.72,$148.76,Cash
+652837700,BrokerageLink,FXAIX,FIDELITY 500 INDEX FUND,94.13,$197.59,+$1.28,$18599.14,+$120.48,+0.65%,+$3943.85,+26.91%,49.94%,$14655.29,$155.69,Cash
+Z05356621,Cash Management (Individual - TOD),CORE**,FDIC-INSURED DEPOSIT SWEEP,,,,$0.44,,,,,100.00%,,,Cash
+
+"The data and information in this spreadsheet is provided to you solely for your use and is not for distribution. The spreadsheet is provided for informational purposes only, and is not intended to provide advice, nor should it be construed as an offer to sell, a solicitation of an offer to buy or a recommendation for any security by Fidelity or any third party. Data and information shown is based on information known to Fidelity as of the date it was exported and is subject to change. It should not be used in place of your account statements or trade confirmations and is not intended for tax reporting purposes. For more information on the data included in this spreadsheet, including any limitations thereof, go to Fidelity.com."
+
+"Brokerage services are provided by Fidelity Brokerage Services LLC (FBS), 900 Salem Street, Smithfield, RI 02917. Custody and other services provided by National Financial Services LLC (NFS). Both are Fidelity Investment companies and members SIPC, NYSE. Neither FBS nor NFS offer crypto as a direct investment nor provide trading or custody services for such assets."
+
+"Date downloaded Mar-17-2025 11:20 p.m ET"
