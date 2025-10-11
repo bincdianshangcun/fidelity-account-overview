@@ -21,7 +21,7 @@ source $ActivatePath
 pushd $PrjDir
 
 
-./run.sh
+./run.sh && xdg-open http://localhost:8502
 
 
 popd

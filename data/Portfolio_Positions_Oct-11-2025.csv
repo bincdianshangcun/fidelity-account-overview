@@ -1,0 +1,28 @@
+﻿Account Number,Account Name,Symbol,Description,Quantity,Last Price,Last Price Change,Current Value,Today's Gain/Loss Dollar,Today's Gain/Loss Percent,Total Gain/Loss Dollar,Total Gain/Loss Percent,Percent Of Account,Cost Basis Total,Average Cost Basis,Type
+X40643629,Individual - TOD,SPAXX**,HELD IN MONEY MARKET,,,,$496952.63,,,,,24.94%,,,Cash
+X40643629,Individual - TOD,50162D100,L&L ENERGY INC COM STK USD0.001 ISIN #US50162D1000 SEDOL #B4XF8P0,1180,--,--,--,--,--,--,--,0.00%,$5581.40,$4.73,Cash
+X40643629,Individual - TOD,FZDXX,FIDELITY MMKT PREMIUM CLASS,28355.62,$1.00,$0.00,$28355.62,--,--,--,--,1.42%,--,--,Cash
+X40643629,Individual - TOD,GRAB,GRAB HLDGS LTD CL A ORD ISIN #KYG4124C1096,19761,$5.86,-$0.31,$115799.46,-$6125.91,-5.03%,+$104108.52,+890.50%,5.81%,$11690.94,$0.59,Cash
+X40643629,Individual - TOD,ORCL,ORACLE CORP,3025.762,$292.96,-$4.00,$886427.23,-$12103.05,-1.35%,+$114708.30,+14.86%,44.49%,$771718.93,$255.05,Margin
+X40643629,Individual - TOD,QQQ,INVESCO QQQ TR UNIT SER 1,396.431,$589.50,-$21.20,$233696.07,-$8404.34,-3.48%,+$39489.54,+20.33%,11.73%,$194206.53,$489.89,Margin
+X40643629,Individual - TOD,VOO,VANGUARD INDEX FUNDS S&P 500 ETF USD,384.797,$600.51,-$16.59,$231074.44,-$6383.79,-2.69%,+$28470.20,+14.05%,11.60%,$202604.24,$526.52,Margin
+216811260,ROTH IRA,SPAXX**,HELD IN MONEY MARKET,,,,$46737.93,,,,,73.64%,,,Cash
+216811260,ROTH IRA,VOO,VANGUARD INDEX FUNDS S&P 500 ETF USD,27.867,$600.51,-$16.59,$16734.41,-$462.32,-2.69%,+$2126.25,+14.55%,26.36%,$14608.16,$524.21,Cash
+220826526,Traditional IRA,SPAXX**,HELD IN MONEY MARKET,,,,$254330.56,,,,,59.84%,,,Cash
+220826526,Traditional IRA,BABA,ALIBABA GROUP HOLDING LTD SPON ADS EACH REP 8 ORD SHS,577.096,$159.01,-$14.67,$91764.03,-$8466.00,-8.45%,-$21284.66,-18.83%,21.59%,$113048.69,$195.89,Cash
+220826526,Traditional IRA,QQQ,INVESCO QQQ TR UNIT SER 1,70.073,$589.50,-$21.20,$41308.03,-$1485.55,-3.48%,+$7252.07,+21.29%,9.72%,$34055.96,$486.01,Cash
+220826526,Traditional IRA,VOO,VANGUARD INDEX FUNDS S&P 500 ETF USD,62.581,$600.51,-$16.59,$37580.51,-$1038.22,-2.69%,+$4843.93,+14.79%,8.84%,$32736.58,$523.11,Cash
+35004,ORACLE CORPORATION,,BROKERAGELINK,270553.25,$1.00,$0.00,$270553.25,$0.00,0.00%,$0.00,0.00%,--,$270553.25,$1.00,
+89766,MICROSOFT 401K PLAN,,BROKERAGELINK,44664.1,$1.00,$0.00,$44664.10,$0.00,0.00%,$0.00,0.00%,--,$44664.10,$1.00,
+89766,MICROSOFT 401K PLAN,BRT2DP6D1,BTC SHRT-TERM INV,0.4,$1.00,$0.00,$0.40,$0.00,0.00%,$0.00,0.00%,100.00%,$0.40,$1.00,
+652837696,BrokerageLink,FDRXX**,HELD IN MONEY MARKET,,,,$67041.15,,,,,24.78%,,,Cash
+652837696,BrokerageLink,FXAIX,FIDELITY 500 INDEX FUND,893.93,$227.66,-$6.31,$203512.10,-$5640.70,-2.70%,+$58594.64,+40.43%,75.22%,$144917.46,$162.11,Cash
+652837700,BrokerageLink,FDRXX**,HELD IN MONEY MARKET,,,,$20180.87,,,,,45.18%,,,Cash
+652837700,BrokerageLink,FXAIX,FIDELITY 500 INDEX FUND,107.543,$227.66,-$6.31,$24483.23,-$678.60,-2.70%,+$7227.50,+41.88%,54.82%,$17255.73,$160.45,Cash
+Z05356621,Cash Management (Individual - TOD),CORE**,FDIC-INSURED DEPOSIT SWEEP,,,,$0.44,,,,,100.00%,,,Cash
+
+"The data and information in this spreadsheet is provided to you solely for your use and is not for distribution. The spreadsheet is provided for informational purposes only, and is not intended to provide advice, nor should it be construed as an offer to sell, a solicitation of an offer to buy or a recommendation for any security by Fidelity or any third party. Data and information shown is based on information known to Fidelity as of the date it was exported and is subject to change. It should not be used in place of your account statements or trade confirmations and is not intended for tax reporting purposes. For more information on the data included in this spreadsheet, including any limitations thereof, go to Fidelity.com."
+
+"Brokerage services are provided by Fidelity Brokerage Services LLC (FBS), 900 Salem Street, Smithfield, RI 02917. Custody and other services provided by National Financial Services LLC (NFS). Both are Fidelity Investment companies and members SIPC, NYSE. Neither FBS nor NFS offer crypto as a direct investment nor provide trading or custody services for such assets."
+
+"Date downloaded Oct-11-2025 3:10 p.m ET"
