@@ -3,4 +3,5 @@
 
 ./setup-data.py
 
-streamlit run app.py --server.headless true
+# To skip openning browser, add --server.headless true
+streamlit run app.py 
