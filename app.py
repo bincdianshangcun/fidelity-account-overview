@@ -37,7 +37,7 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     - In numbers columns
       - Replace '--' with np.nan
       - Clean $ and % signs from values and convert to floats
-    - In Cash accolunts
+    - In Cash accounts
       - Fill in missing value of number coulmns
     - In BrokerageLink accounts
       - Rename account_number to MSFT or ORCL based on a mapping
@@ -81,7 +81,7 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
             "today's_gain_loss_dollar": 0,
             "today's_gain_loss_percent": 0,
     }
-    for cash_symbol in ['SPAXX**', 'CORE**', 'FZDXX']:
+    for cash_symbol in ['SPAXX**', 'CORE**', 'FZDXX', 'FDRXX**']:
         df.loc[df.query(f'symbol=="{cash_symbol}"').index, [ 
             c for c in cash_symbol_fillin.keys() 
         ]] = [
@@ -103,7 +103,7 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     
     
     investment_type_mapping = {
-        'Cash': ['SPAXX**','FZDXX'],
+        'Cash': ['SPAXX**','FZDXX', 'FDRXX**'],
         'IndexFund': ['FXAIX','VOO','QQQ'],
     }
     investment_type_mapping = {   
@@ -272,7 +272,7 @@ def main() -> None:
         text=[f"{v1}<br>{fmt_float(v2)}<br>{fmt_float(v3)}% ({glfn(v3)})" for v1,v2,v3 in zip(df['account_name'], df['current_value'], df['total_gain_loss_percent'])],
     )
 
-    def draw_sunburst(ldf,**kwargs) -> None:
+    def draw_sunburst(ldf,**kwargs):
         lkwargs = COMMON_ARGS.copy()
         if kwargs:
             lkwargs |= kwargs
