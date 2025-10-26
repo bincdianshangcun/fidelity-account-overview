@@ -105,6 +105,7 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     investment_type_mapping = {
         'Cash': ['SPAXX**','FZDXX', 'FDRXX**'],
         'IndexFund': ['FXAIX','VOO','QQQ'],
+        'Gold': ['GLD'],
     }
     investment_type_mapping = {   
         s:k

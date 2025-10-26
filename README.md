@@ -1,5 +1,5 @@
 # How to use
-- source.venv
 - fidelity portfolio | Accounts | All acounts | Positions | ... | download
+- source.venv
 - ./setup-data.py
 - ./run-overview.sh
