@@ -167,7 +167,15 @@ def main() -> None:
     else:
         st.success("Uploaded your file!")
 
-    df = pd.read_csv(uploaded_data)
+    # read header, get the columns
+    # only read data rows within the header column range
+    # otherwise cleanup|tranform|float error out
+    header = pd.read_csv(uploaded_data, nrows=0)
+    ncols = len(header.columns)
+
+    uploaded_data.seek(0)
+    df = pd.read_csv(uploaded_data, usecols=range(ncols))
+
     with st.expander("Raw Dataframe"):
         st.write(df)
 
