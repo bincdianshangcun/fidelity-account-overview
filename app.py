@@ -23,6 +23,9 @@ COMMON_ARGS = {
     ],
 }
 
+CashSymbols = ['SPAXX**', 'CORE**', 'FZDXX', 'FDRXX**', 'FZFXX**']
+GoldSymbols = ['GLD', 'IAU']
+
 
 @st.cache_data
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
@@ -81,7 +84,7 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
             "today's_gain_loss_dollar": 0,
             "today's_gain_loss_percent": 0,
     }
-    for cash_symbol in ['SPAXX**', 'CORE**', 'FZDXX', 'FDRXX**']:
+    for cash_symbol in CashSymbols:
         df.loc[df.query(f'symbol=="{cash_symbol}"').index, [ 
             c for c in cash_symbol_fillin.keys() 
         ]] = [
@@ -103,9 +106,9 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     
     
     investment_type_mapping = {
-        'Cash': ['SPAXX**','FZDXX', 'FDRXX**'],
+        'Cash': CashSymbols,
         'IndexFund': ['FXAIX','VOO','QQQ'],
-        'Gold': ['GLD'],
+        'Gold': GoldSymbols,
     }
     investment_type_mapping = {   
         s:k

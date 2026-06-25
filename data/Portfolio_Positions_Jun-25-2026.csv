@@ -1,0 +1,30 @@
+﻿Account Number,Account Name,Symbol,Description,Quantity,Last Price,Last Price Change,Current Value,Today's Gain/Loss Dollar,Today's Gain/Loss Percent,Total Gain/Loss Dollar,Total Gain/Loss Percent,Percent Of Account,Cost Basis Total,Average Cost Basis,Type
+X40643629,Individual - TOD,FZFXX**,HELD IN MONEY MARKET,,,,$441776.47,,,,,30.48%,,,Cash,
+X40643629,Individual - TOD,50162D100,L&L ENERGY INC COM STK USD0.001 ISIN #US50162D1000 SEDOL #B4XF8P0,1180,--,--,--,--,--,--,--,0.00%,$5581.40,$4.73,Cash,
+X40643629,Individual - TOD,GRAB,GRAB HLDGS LTD CL A ORD ISIN #KYG4124C1096,19761,$3.46,-$0.03,$68373.06,-$592.83,-0.86%,+$56682.12,+484.83%,4.72%,$11690.94,$0.59,Cash,
+X40643629,Individual - TOD,ORCL,ORACLE CORP,2596.666,$151.67,-$5.86,$393836.33,-$15216.47,-3.72%,-$263995.57,-40.14%,27.17%,$657831.90,$253.34,Margin,
+X40643629,Individual - TOD,QQQ,INVESCO QQQ TR UNIT SER 1,397.878,$714.96,+$4.34,$284466.85,+$1726.79,+0.61%,+$89378.87,+45.81%,19.62%,$195087.98,$490.32,Margin,
+X40643629,Individual - TOD,VOO,VANGUARD INDEX FUNDS S&P 500 ETF USD,387.115,$674.62,-$1.07,$261155.52,-$414.22,-0.16%,+$57147.29,+28.01%,18.02%,$204008.23,$527.00,Margin,
+216811260,ROTH IRA,SPAXX**,HELD IN MONEY MARKET,,,,$63841.49,,,,,77.15%,,,Cash,
+216811260,ROTH IRA,VOO,VANGUARD INDEX FUNDS S&P 500 ETF USD,28.035,$674.62,-$1.07,$18912.97,-$30.00,-0.16%,+$4304.81,+29.46%,22.85%,$14608.16,$521.07,Cash,
+220826526,Traditional IRA,FDRXX**,HELD IN MONEY MARKET,,,,$140298.78,,,,,29.27%,,,Cash,
+220826526,Traditional IRA,CRM,SALESFORCE INC COM,625,$149.81,-$2.95,$93631.25,-$1843.75,-1.94%,-$15557.24,-14.25%,19.53%,$109188.49,$174.70,Cash,
+220826526,Traditional IRA,IAU,ISHARES GOLD TR ISHARES NEW ISIN #US4642852044 SEDOL #BKP74N6,1715.055,$75.805,+$0.815,$130009.74,+$1397.76,+1.08%,-$8288.20,-6.00%,27.12%,$138297.94,$80.64,Cash,
+220826526,Traditional IRA,ORCL,ORACLE CORP,200,$151.67,-$5.86,$30334.00,-$915.75,-2.94%,+$73.00,+0.24%,6.33%,$30261.00,$151.31,Cash,
+220826526,Traditional IRA,QQQ,INVESCO QQQ TR UNIT SER 1,70.329,$714.96,+$4.34,$50282.42,+$305.22,+0.61%,+$16226.46,+47.64%,10.49%,$34055.96,$484.24,Cash,
+220826526,Traditional IRA,VOO,VANGUARD INDEX FUNDS S&P 500 ETF USD,62.957,$674.62,-$1.07,$42472.05,-$67.37,-0.16%,+$9735.47,+29.73%,8.86%,$32736.58,$519.98,Cash,
+220826526,Traditional IRA,Pending activity,,,,,-$7620.25,,,,,,,,,
+35004,ORACLE CORPORATION,,BROKERAGELINK,329250.97,$1.00,$0.00,$329250.97,$0.00,0.00%,$0.00,0.00%,--,$329250.97,$1.00,,
+89766,MICROSOFT 401K PLAN,,STABLE VALUE ACCOUNT,0.078,$10.2176,+$0.0011,$0.80,$0.00,+0.01%,+$0.01,+1.27%,100.00%,$0.79,$10.13,,
+89766,MICROSOFT 401K PLAN,,BROKERAGELINK,51939.67,$1.00,$0.00,$51939.67,$0.00,0.00%,$0.00,0.00%,--,$51939.67,$1.00,,
+652837696,BrokerageLink,FDRXX**,HELD IN MONEY MARKET,,,,$68615.42,,,,,20.84%,,,Cash,
+652837696,BrokerageLink,FXAIX,FIDELITY 500 INDEX FUND,1017.035,$256.27,-$0.25,$260635.55,-$252.60,-0.10%,+$87219.98,+50.29%,79.16%,$173415.57,$170.51,Cash,
+652837700,BrokerageLink,FDRXX**,HELD IN MONEY MARKET,,,,$20646.80,,,,,39.75%,,,Cash,
+652837700,BrokerageLink,FXAIX,FIDELITY 500 INDEX FUND,122.109,$256.27,-$0.25,$31292.87,-$30.53,-0.10%,+$10685.63,+51.85%,60.25%,$20607.24,$168.76,Cash,
+Z05356621,Cash Management (Individual - TOD),CORE**,FDIC-INSURED DEPOSIT SWEEP,,,,$0.44,,,,,100.00%,,,Cash,
+
+"The data and information in this spreadsheet is provided to you solely for your use and is not for distribution. The spreadsheet is provided for informational purposes only, and is not intended to provide advice, nor should it be construed as an offer to sell, a solicitation of an offer to buy or a recommendation for any security by Fidelity or any third party. Data and information shown is based on information known to Fidelity as of the date it was exported and is subject to change. It should not be used in place of your account statements or trade confirmations and is not intended for tax reporting purposes. For more information on the data included in this spreadsheet, including any limitations thereof, go to Fidelity.com."
+
+"Brokerage services are provided by Fidelity Brokerage Services LLC (FBS), 900 Salem Street, Smithfield, RI 02917. Custody and other services provided by National Financial Services LLC (NFS). Both are Fidelity Investment companies and members SIPC, NYSE. Neither FBS nor NFS offer crypto as a direct investment nor provide trading or custody services for such assets."
+
+"Date downloaded Jun-25-2026 1:50 p.m ET"
