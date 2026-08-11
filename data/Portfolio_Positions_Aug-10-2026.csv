@@ -1,0 +1,27 @@
+﻿Account number,Account name,Symbol,Description,Quantity,Last price,Last price change,Current value,Today's gain/loss dollar,Today's gain/loss percent,Total gain/loss dollar,Total gain/loss percent,Percent of account,Cost basis total,Average cost basis,Type
+X40643629,Individual - TOD,FZFXX**,HELD IN MONEY MARKET,,,,$416172.71,,,,,28.95%,,,Cash,
+X40643629,Individual - TOD,50162D100,L&L ENERGY INC COM STK USD0.001 ISIN #US50162D1000 SEDOL #B4XF8P0,1180,--,--,--,--,--,--,--,0.00%,$5581.40,$4.73,Cash,
+X40643629,Individual - TOD,GRAB,GRAB HLDGS LTD CL A ORD ISIN #KYG4124C1096,19761,$3.655,-$0.005,$72226.45,-$98.81,-0.14%,+$60535.51,+517.79%,5.03%,$11690.94,$0.59,Cash,
+X40643629,Individual - TOD,ORCL,ORACLE CORP,2607.364,$149.87,+$2.85,$390765.64,+$7430.98,+1.93%,-$268364.59,-40.72%,27.19%,$659130.23,$252.80,Margin,
+X40643629,Individual - TOD,QQQ,INVESCO QQQ TR UNIT SER 1,398.327,$721.5741,-$1.4559,$287422.44,-$579.93,-0.21%,+$92010.79,+47.08%,20.00%,$195411.65,$490.58,Margin,
+X40643629,Individual - TOD,VOO,VANGUARD INDEX FUNDS S&P 500 ETF USD,388.234,$710.3101,-$0.3999,$275766.53,-$155.26,-0.06%,+$70998.70,+34.67%,19.19%,$204767.83,$527.43,Margin,
+X40643629,Individual - TOD,Pending activity,,,,,-$5000.00,,,,,,,,,
+216811260,ROTH IRA,SPAXX**,HELD IN MONEY MARKET,,,,$62158.73,,,,,73.77%,,,Cash,
+216811260,ROTH IRA,VOO,VANGUARD INDEX FUNDS S&P 500 ETF USD,31.116,$710.3101,-$0.3999,$22102.00,-$12.45,-0.06%,+$5461.01,+32.81%,26.23%,$16640.99,$534.80,Cash,
+220826526,Traditional IRA,FDRXX**,HELD IN MONEY MARKET,,,,$55904.52,,,,,10.52%,,,Cash,
+220826526,Traditional IRA,CRM,SALESFORCE INC COM,625,$197.015,+$4.275,$123134.37,+$2671.87,+2.21%,+$13945.88,+12.77%,23.18%,$109188.49,$174.70,Cash,
+220826526,Traditional IRA,IAU,ISHARES GOLD TR ISHARES NEW ISIN #US4642852044 SEDOL #BKP74N6,1715.055,$81.86,+$0.18,$140394.40,+$308.70,+0.22%,+$2096.46,+1.51%,26.43%,$138297.94,$80.64,Cash,
+220826526,Traditional IRA,ORCL,ORACLE CORP,775,$149.87,+$2.85,$116149.25,+$2208.75,+1.93%,+$7989.85,+7.38%,21.86%,$108159.40,$139.56,Cash,
+220826526,Traditional IRA,QQQ,INVESCO QQQ TR UNIT SER 1,70.408,$721.5741,-$1.4559,$50804.58,-$102.51,-0.21%,+$16748.62,+49.17%,9.56%,$34055.96,$483.69,Cash,
+220826526,Traditional IRA,VOO,VANGUARD INDEX FUNDS S&P 500 ETF USD,63.139,$710.3101,-$0.3999,$44848.26,-$25.25,-0.06%,+$12111.68,+36.99%,8.44%,$32736.58,$518.48,Cash,
+35004,ORACLE CORPORATION,,BROKERAGELINK,409044.52,$1.00,$0.00,$409044.52,$0.00,0.00%,$0.00,0.00%,--,$409044.52,$1.00,,
+652837696,BrokerageLink,FDRXX**,HELD IN MONEY MARKET,,,,$127270.73,,,,,31.11%,,,Cash,
+652837696,BrokerageLink,FXAIX,FIDELITY 500 INDEX FUND,1043.625,$269.71,+$1.67,$281476.09,+$1742.85,+0.62%,+$101754.37,+56.61%,68.81%,$179721.72,$172.21,Cash,
+652837696,BrokerageLink,QQQM,INVESCO EXCH TRADED FD TR II NASDAQ 100 ETF,1,$297.105,-$0.595,$297.10,-$0.60,-0.20%,+$4.76,+1.62%,0.07%,$292.34,$292.34,Cash,
+Z05356621,Cash Management (Individual - TOD),CORE**,FDIC-INSURED DEPOSIT SWEEP,,,,$0.44,,,,,100.00%,,,Cash,
+
+"The data and information in this spreadsheet is provided to you solely for your use and is not for distribution. The spreadsheet is provided for informational purposes only, and is not intended to provide advice, nor should it be construed as an offer to sell, a solicitation of an offer to buy or a recommendation for any security by Fidelity or any third party. Data and information shown is based on information known to Fidelity as of the date it was exported and is subject to change. It should not be used in place of your account statements or trade confirmations and is not intended for tax reporting purposes. For more information on the data included in this spreadsheet, including any limitations thereof, go to Fidelity.com."
+
+"Brokerage services are provided by Fidelity Brokerage Services LLC (FBS), 900 Salem Street, Smithfield, RI 02917. Custody and other services provided by National Financial Services LLC (NFS). Both are Fidelity Investment companies and members SIPC, NYSE. Neither FBS nor NFS offer crypto as a direct investment nor provide trading or custody services for such assets."
+
+"Date downloaded Aug-10-2026 12:57 p.m ET"
